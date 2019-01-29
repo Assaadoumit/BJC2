@@ -19,12 +19,15 @@ HighScoreLabel.text = "0"
         GiveATryButton.layer.cornerRadius = 20
         HowToCountButton.layer.cornerRadius = 20
         if (ViewController.highScoreDefault.value(forKey: "highScore") != nil){
-            ViewController.highScore = ViewController.highScoreDefault.value(forKey: "highScore") as! Int
+            ViewController.highScore = ViewController.highScoreDefault.value(forKey:
+                "highScore") as! Int
         }
+        
         HighScoreLabel.text = " HighScore = \(ViewController.highScore)"
     
 
     
+        
         func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     

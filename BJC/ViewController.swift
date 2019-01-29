@@ -54,7 +54,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
     ValidateButton.layer.cornerRadius = 15
        
 
-       
+    
         
         NextButtonPressed(self)
         
@@ -181,7 +181,6 @@ class ViewController: UIViewController , UITextFieldDelegate {
                 ViewController.highScoreDefault.synchronize()
             }
             
-        
             
             
             
@@ -206,14 +205,10 @@ class ViewController: UIViewController , UITextFieldDelegate {
             SVProgressHUD.showSuccess(withStatus: "Congrats , you just counted 100 cards in a row")
             
         }
-
-        TextField.text = ""
+            TextField.text = ""
        
        
-            
-        
-            
-        }
+            }
         
         
         

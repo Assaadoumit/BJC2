@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AE4-ev-gok">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AE4-ev-gok">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,29 +14,41 @@
         <scene sceneID="Y8Y-oP-NO4">
             <objects>
                 <viewController id="AE4-ev-gok" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nhG-y1-5yE"/>
+                        <viewControllerLayoutGuide type="bottom" id="8pw-Ve-BOp"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nYj-qb-Z82">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BKGR2" translatesAutoresizingMaskIntoConstraints="NO" id="do8-gl-8pV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BKGR2" translatesAutoresizingMaskIntoConstraints="NO" id="do8-gl-8pV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BlackJack Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3S-Yl-Opy">
-                                <rect key="frame" x="22" y="233" width="330" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlackJack Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3S-Yl-Opy">
+                                <rect key="frame" x="50" y="260" width="275" height="167"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="OaL-2n-7Z2"/>
+                        <constraints>
+                            <constraint firstItem="i3S-Yl-Opy" firstAttribute="top" secondItem="nhG-y1-5yE" secondAttribute="bottom" constant="240" id="1q5-Rt-wWv"/>
+                            <constraint firstItem="i3S-Yl-Opy" firstAttribute="leading" secondItem="nYj-qb-Z82" secondAttribute="leading" constant="50" id="FbZ-ac-dFs"/>
+                            <constraint firstItem="do8-gl-8pV" firstAttribute="trailing" secondItem="nYj-qb-Z82" secondAttribute="trailing" id="Nj2-UJ-gyV"/>
+                            <constraint firstItem="do8-gl-8pV" firstAttribute="top" secondItem="nYj-qb-Z82" secondAttribute="top" id="SMA-GX-GG2"/>
+                            <constraint firstItem="8pw-Ve-BOp" firstAttribute="top" secondItem="i3S-Yl-Opy" secondAttribute="bottom" constant="240" id="YRv-Gj-SFO"/>
+                            <constraint firstAttribute="trailing" secondItem="i3S-Yl-Opy" secondAttribute="trailing" constant="50" id="dvf-mL-v1K"/>
+                            <constraint firstAttribute="height" secondItem="do8-gl-8pV" secondAttribute="height" id="frs-Gu-RZe"/>
+                            <constraint firstItem="do8-gl-8pV" firstAttribute="bottom" secondItem="8pw-Ve-BOp" secondAttribute="top" id="kxk-ih-6GB"/>
+                            <constraint firstItem="do8-gl-8pV" firstAttribute="leading" secondItem="nYj-qb-Z82" secondAttribute="leading" id="ux8-7E-ood"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTB-D4-8kG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5.5999999999999996" y="359.37031484257875"/>
+            <point key="canvasLocation" x="2" y="337"/>
         </scene>
     </scenes>
     <resources>
