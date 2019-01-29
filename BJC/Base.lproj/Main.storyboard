@@ -433,7 +433,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First You Should know the value of each card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssv-LA-QqA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="First You Should know the value of each card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssv-LA-QqA">
                                                 <rect key="frame" x="11" y="70" width="364" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -758,7 +758,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLACKJACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-5u-lz6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLACKJACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-5u-lz6">
                                 <rect key="frame" x="43" y="249" width="329" height="56.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="DtV-HI-qZZ"/>
@@ -782,7 +782,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4Lc-pp-MU5" firstAttribute="top" secondItem="4ra-5u-lz6" secondAttribute="bottom" constant="8.5" id="11e-1O-wJk"/>
-                            <constraint firstItem="4ra-5u-lz6" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="1zc-8C-ieZ"/>
                             <constraint firstItem="4ra-5u-lz6" firstAttribute="leading" secondItem="4Qj-tF-Z79" secondAttribute="leading" constant="43" id="52d-ke-54x"/>
                             <constraint firstItem="6xz-pc-efI" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="Fv5-VF-4GS"/>
                             <constraint firstItem="H7V-wl-lpQ" firstAttribute="top" secondItem="4Qj-tF-Z79" secondAttribute="top" id="G6X-GR-lNs"/>
@@ -792,7 +791,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4Lc-pp-MU5" secondAttribute="trailing" constant="92.5" id="LjX-Oe-Y7V"/>
                             <constraint firstItem="1qE-19-MRC" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="Q1F-Dq-vl7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1qE-19-MRC" secondAttribute="trailing" constant="74" id="ZSB-z3-scd"/>
-                            <constraint firstItem="4Lc-pp-MU5" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="Zxe-it-oWU"/>
                             <constraint firstItem="1qE-19-MRC" firstAttribute="top" secondItem="4Lc-pp-MU5" secondAttribute="bottom" constant="48.5" id="bA6-gY-tAg"/>
                             <constraint firstAttribute="trailing" secondItem="4ra-5u-lz6" secondAttribute="trailing" constant="3" id="bY8-oS-Nia"/>
                             <constraint firstAttribute="trailing" secondItem="H7V-wl-lpQ" secondAttribute="trailing" id="ceD-MK-Ccd"/>
@@ -828,7 +826,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QBr-UV-GPp"/>
-        <segue reference="2Vh-39-2Nm"/>
+        <segue reference="sH1-1D-fnO"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0071383341859999998" green="0.023576300759999998" blue="0.003545719907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
