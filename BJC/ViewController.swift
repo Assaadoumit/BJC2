@@ -30,12 +30,16 @@ class ViewController: UIViewController , UITextFieldDelegate {
     var randomCardIndex4 : Int = 0
     var score :Int = 0
     var achievement : Int = 0
-   static var highScore : Int = 0
+    static var highScore : Int = 0
     var firstHighscore : Int = 0
-   static var highScoreDefault = UserDefaults.standard
+    static var highScoreDefault = UserDefaults.standard
     
     let Deck = [ "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "Jack", "Queen", "King", "Ace"]
     
+    @IBAction func HintButton(_ sender: Any) {
+        
+        SVProgressHUD.showInfo(withStatus: "2->6:+1  7->9:0  10->Ace:-1")
+    }
     
     var disclaimerHasBeenDisplayed = false
     
