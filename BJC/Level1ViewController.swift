@@ -18,7 +18,8 @@ public class Level2ViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var NextRound: UIButton!
     @IBOutlet weak var  Reset: UIButton!
     
- public   var randomCardIndex1 : Int = 0
+    
+    public   var randomCardIndex1 : Int = 0
     var randomCardIndex2 : Int = 0
     var randomCardIndex3 : Int = 0
     var randomCardIndex4 : Int = 0
@@ -208,6 +209,8 @@ public class Level2ViewController: UIViewController , UITextFieldDelegate {
             print(TextField.text as Any)
             SVProgressHUD.showSuccess(withStatus: "Correct!")
             
+            
+        
             
         }else  {
             print("incorrecet")

@@ -10,31 +10,33 @@ import UIKit
 import CoreData
 
 class HomeViewController: UIViewController {
-@IBOutlet weak var GiveATryButton: UIButton!
-@IBOutlet weak var HowToCountButton: UIButton!
+    
+    @IBOutlet weak var GiveATryButton: UIButton!
+    @IBOutlet weak var HowToCountButton: UIButton!
     @IBOutlet weak var HighScoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-HighScoreLabel.text = "0"
+        HighScoreLabel.text = "0"
         GiveATryButton.layer.cornerRadius = 20
         HowToCountButton.layer.cornerRadius = 20
-        if (ViewController.highScoreDefault.value(forKey: "highScore") != nil){
-            ViewController.highScore = ViewController.highScoreDefault.value(forKey:
+        if (ViewController.shared.highScoreDefault.value(forKey: "highScore") != nil){
+            ViewController.shared.highScore = ViewController.shared.highScoreDefault.value(forKey:
                 "highScore") as! Int
         }
         
-        HighScoreLabel.text = " HighScore = \(ViewController.highScore)"
-    
-
-    
+        HighScoreLabel.text = " HighScore = \(ViewController.shared.highScore)"
+        
+        
+        
         
         func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    
+            super.didReceiveMemoryWarning()
+            
+        }
+        
+        
     }
-    
-    
-}
 }
 
 

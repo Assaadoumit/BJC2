@@ -23,42 +23,55 @@ class ViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var TextField: UITextField!
     
     
-    
+    var disclaimerHasBeenDisplayed = false
     var randomCardIndex1 : Int = 0
     var randomCardIndex2 : Int = 0
     var randomCardIndex3 : Int = 0
     var randomCardIndex4 : Int = 0
     var score :Int = 0
     var achievement : Int = 0
-    static var highScore : Int = 0
+    var highScore : Int = 0
     var firstHighscore : Int = 0
-    static var highScoreDefault = UserDefaults.standard
-    
+    var highScoreDefault = UserDefaults.standard
+    static var shared = ViewController()
     let Deck = [ "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "Jack", "Queen", "King", "Ace"]
+    
+    func showAlert(_ message : String) {
+        let alert = UIAlertController(title: "nothing", message: message, preferredStyle: .actionSheet)
+        let yesAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(yesAction)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func HintButton(_ sender: Any) {
         
         SVProgressHUD.showInfo(withStatus: "2->6:+1  7->9:0  10->Ace:-1")
     }
     
-    var disclaimerHasBeenDisplayed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.endEditing(true)
+   
+        showAlert("sex")
+    
         
+     
         
         let highScoreDefault = UserDefaults.standard
         if (highScoreDefault.value(forKey: "highScore") != nil){
-            ViewController.highScore = highScoreDefault.value(forKey: "highScore") as! Int
+            ViewController.shared.highScore = highScoreDefault.value(forKey: "highScore") as! Int
         }
         
     ResetButton.layer.cornerRadius = 15
     NextButton.layer.cornerRadius = 15
     ValidateButton.layer.cornerRadius = 15
        
-
-    
+        
+     
+     
         
         NextButtonPressed(self)
         
@@ -78,6 +91,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         
 //        NextButtonPressed(self)
     
+        
         
     }
     
@@ -165,7 +179,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
 
     
     
-    @IBAction func CheckAnswer(_ sender: AnyObject) {
+    @IBAction func checkAnswer(_ sender: AnyObject) {
         
         if TextField.text! == ""{
             SVProgressHUD.showInfo(withStatus: "Please enter the count")
@@ -177,12 +191,12 @@ class ViewController: UIViewController , UITextFieldDelegate {
             
                 NextButtonPressed(self)
                 print("achivement is ",achievement)
-            print("the highscore is",ViewController.highScore)
-            if achievement>ViewController.highScore {
+            print("the highscore is",ViewController.shared.highScore)
+            if achievement>ViewController.shared.highScore {
                 
-                ViewController.highScore = achievement
-                ViewController.highScoreDefault.setValue(ViewController.highScore, forKey: "highScore")
-                ViewController.highScoreDefault.synchronize()
+                ViewController.shared.highScore = achievement
+                ViewController.shared.highScoreDefault.setValue(ViewController.shared.highScore, forKey: "highScore")
+                ViewController.shared.highScoreDefault.synchronize()
             }
             
             
