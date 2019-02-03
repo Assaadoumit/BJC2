@@ -36,14 +36,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
     static var shared = ViewController()
     let Deck = [ "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "Jack", "Queen", "King", "Ace"]
     
-    func showAlert(_ message : String) {
-        let alert = UIAlertController(title: "nothing", message: message, preferredStyle: .actionSheet)
-        let yesAction = UIAlertAction(title: "ok", style: .default, handler: nil)
-        alert.addAction(yesAction)
-        DispatchQueue.main.async {
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
+    
     
     @IBAction func HintButton(_ sender: Any) {
         
@@ -55,7 +48,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         super.viewDidLoad()
         self.view.endEditing(true)
    
-        showAlert("sex")
+       
     
         
      

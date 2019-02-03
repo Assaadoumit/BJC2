@@ -635,7 +635,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-VK-RGa">
                                                 <rect key="frame" x="15" y="1728" width="339" height="183"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <string key="text">In real life, when you are on the BlackJack table and your count after a couple rounds is high ex(&gt;10), thats means in your next hit you have a biggest chance to have a card that have a high value and the same if your count is low ex(-10), thats mean that in your next hit you have a bigger chance to have a low value card . </string>
+                                                <string key="text">In real life, when you are on the BlackJack table and your count after a couple of rounds is high ex(&gt;10), that means in your next hit you have a bigger chance to has a card that have a high value and the same goes for if your count is low ex(-10), that means that in your next hit you have a bigger chance to have a low value card . </string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
