@@ -23,7 +23,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var TextField: UITextField!
     
     
-    var disclaimerHasBeenDisplayed = false
+    //var disclaimerHasBeenDisplayed = false
     var randomCardIndex1 : Int = 0
     var randomCardIndex2 : Int = 0
     var randomCardIndex3 : Int = 0
@@ -59,7 +59,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         }
         
     ResetButton.layer.cornerRadius = 15
-    NextButton.layer.cornerRadius = 15
+//    NextButton.layer.cornerRadius = 15
     ValidateButton.layer.cornerRadius = 15
        
         
@@ -96,12 +96,12 @@ class ViewController: UIViewController , UITextFieldDelegate {
   
 
     @objc func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -150 // Move view 150 points upward
+        self.view.frame.origin.y = -185 // Move view 150 points upward
     }
-    
+
     @objc func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y = 0 // Move view to original position
-    
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -109,7 +109,8 @@ class ViewController: UIViewController , UITextFieldDelegate {
     }
     
     
-    @IBAction func NextButtonPressed(_ sender: Any) {
+   
+    func NextButtonPressed(_ sender: Any) {
     
 
         
