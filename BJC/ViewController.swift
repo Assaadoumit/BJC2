@@ -14,7 +14,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
 
     
     @IBOutlet weak var ValidateButton: UIButton!
-    @IBOutlet weak var NextButton: UIButton!
+//    @IBOutlet weak var NextButton: UIButton!
     @IBOutlet weak var ResetButton: UIButton!
     @IBOutlet weak var DealerCard1: UIImageView!
     @IBOutlet weak var DealerCard2: UIImageView!
@@ -37,22 +37,14 @@ class ViewController: UIViewController , UITextFieldDelegate {
     let Deck = [ "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "Jack", "Queen", "King", "Ace"]
     
     
-    
     @IBAction func HintButton(_ sender: Any) {
         
         SVProgressHUD.showInfo(withStatus: "2->6:+1  7->9:0  10->Ace:-1")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.endEditing(true)
-   
-       
-    
-        
-     
-        
         let highScoreDefault = UserDefaults.standard
         if (highScoreDefault.value(forKey: "highScore") != nil){
             ViewController.shared.highScore = highScoreDefault.value(forKey: "highScore") as! Int
@@ -62,30 +54,21 @@ class ViewController: UIViewController , UITextFieldDelegate {
 //    NextButton.layer.cornerRadius = 15
     ValidateButton.layer.cornerRadius = 15
        
-        
-     
-     
-        
         NextButtonPressed(self)
-        
-  
             NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(sender:)),
-                                                   name: NSNotification.Name.UIKeyboardWillShow,
-                                                   object: nil)
+                                                name:NSNotification.Name.UIKeyboardWillShow,
+                                                object: nil)
         
             NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide(sender:)),
-                                                   name: NSNotification.Name.UIKeyboardWillHide,
-                                                   object: nil)
+                                                name:NSNotification.Name.UIKeyboardWillHide,
+                                                object: nil)
         
         // replace return button with done
-        
             self.TextField.delegate = self
             self.TextField.returnKeyType = .done
         
 //        NextButtonPressed(self)
     
-        
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -96,35 +79,22 @@ class ViewController: UIViewController , UITextFieldDelegate {
   
 
     @objc func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y = -185 // Move view 150 points upward
+        self.view.frame.origin.y = -150 // Move view 185 points upward
     }
 
     @objc func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y = 0 // Move view to original position
-
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
     }
     
-    
-   
     func NextButtonPressed(_ sender: Any) {
-    
-
-        
                 randomCardIndex1 = Int(arc4random_uniform(13))
                 randomCardIndex2 = Int(arc4random_uniform(13))
                 randomCardIndex3 = Int(arc4random_uniform(13))
                 randomCardIndex4 = Int(arc4random_uniform(13))
-
-        
-                DealerCard1.image = UIImage(named: Deck[randomCardIndex1])
-                DealerCard2.image = UIImage(named: Deck[randomCardIndex2])
                 UserCard1.image = UIImage(named: Deck[randomCardIndex3])
                 USerCard2.image = UIImage(named: Deck[randomCardIndex4])
-        
+                DealerCard1.image = UIImage(named: Deck[randomCardIndex1])
+                DealerCard2.image = UIImage(named: Deck[randomCardIndex2])
         
         if randomCardIndex1 >= 0 && randomCardIndex1 < 5{
             score = score + 1
@@ -165,14 +135,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         }
       
         print(score)
-        
-       
-     
     }
-    
-
-    
-    
     @IBAction func checkAnswer(_ sender: AnyObject) {
         
         if TextField.text! == ""{
@@ -193,16 +156,12 @@ class ViewController: UIViewController , UITextFieldDelegate {
                 ViewController.shared.highScoreDefault.synchronize()
             }
             
-            
-            
-            
             }else {
                 
                 print("incorrecet")
                 SVProgressHUD.showError(withStatus: "you lost count")
                 achievement = 0
-
-                
+   
             }
       
         if achievement == 5{
@@ -218,12 +177,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
             
         }
             TextField.text = ""
-       
-       
             }
-        
-        
-        
 //        getData()
     
     
@@ -284,17 +238,9 @@ class ViewController: UIViewController , UITextFieldDelegate {
 //        }catch let error as NSError{
 //            print("Could not save. \(error), \(error.userInfo)")
 //        }
-//
-//
-//    }
-//
-//
-//
-//
-//
-//
-//
-//   open func getData(){
+
+//}
+//    open func getData(){
 //
 //        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 //        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
