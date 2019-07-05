@@ -10,6 +10,8 @@ import UIKit
 import SVProgressHUD
 
 public class Level2ViewController: UIViewController , UITextFieldDelegate {
+    
+    
     @IBOutlet weak var Card1: UIImageView!
     @IBOutlet weak var Card2: UIImageView!
     @IBOutlet weak var Card3: UIImageView!
@@ -17,8 +19,6 @@ public class Level2ViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var TextField: UITextField!
     @IBOutlet weak var NextRound: UIButton!
     @IBOutlet weak var  Reset: UIButton!
-    
-    
     public   var randomCardIndex1 : Int = 0
     var randomCardIndex2 : Int = 0
     var randomCardIndex3 : Int = 0
@@ -51,16 +51,15 @@ public class Level2ViewController: UIViewController , UITextFieldDelegate {
 
         self.TextField.delegate = self
         self.TextField.returnKeyType = .done
-        
-       
-        
+
         
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        TextField.resignFirstResponder()
-        
+        self.TextField.resignFirstResponder()
+        NextButtonPressed(self)        
         return true
+        
     }
     @objc func keyboardWillShow(sender: NSNotification) {
         self.view.frame.origin.y = -150 // Move view 150 points upward
@@ -139,9 +138,7 @@ public class Level2ViewController: UIViewController , UITextFieldDelegate {
         
         SVProgressHUD.showInfo(withStatus: "2->6:+1  7->9:0  10->Ace:-1")
         
-        
     }
-    
     
     @IBAction func NextButtonPressed(_ sender: Any) {
         CheckAnswer(self)
@@ -193,9 +190,13 @@ public class Level2ViewController: UIViewController , UITextFieldDelegate {
             score = score + 0
         }
       
-        print(score)
+        print("the score is \(score)")
         
         
+    }
+    @IBAction func count(_ sender: Any){
+        SVProgressHUD.showInfo(withStatus: "the count is \(score)")
+
     }
     
     @IBAction func CheckAnswer(_ sender: AnyObject) {
@@ -208,20 +209,16 @@ public class Level2ViewController: UIViewController , UITextFieldDelegate {
             print("Correct!")
             print(TextField.text as Any)
             SVProgressHUD.showSuccess(withStatus: "Correct!")
-            
-            
-        
-            
+            score = 0
         }else  {
             print("incorrecet")
             print(TextField.text as Any)
             SVProgressHUD.showError(withStatus: "Incorrect")
         }
-        score = 0
+        
         TextField.text = ""
     
-    }
-    
+        }
     
     }
 

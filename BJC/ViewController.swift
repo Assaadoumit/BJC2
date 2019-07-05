@@ -4,7 +4,9 @@
 //
 //  Created by MacBookPro on 12/10/18.
 //  Copyright © 2018 MacBookPro. All rights reserved.
-//
+// APP Id in ADMob :ca-app-pub-9955020715877598~9830323953
+// ad unit id : ca-app-pub-9955020715877598/3143199825
+
 
 import UIKit
 import SVProgressHUD
@@ -13,17 +15,14 @@ import CoreData
 class ViewController: UIViewController , UITextFieldDelegate {
 
     
+    @IBOutlet weak var NumberOfCardCounted: UILabel!
     @IBOutlet weak var ValidateButton: UIButton!
-//    @IBOutlet weak var NextButton: UIButton!
     @IBOutlet weak var ResetButton: UIButton!
     @IBOutlet weak var DealerCard1: UIImageView!
     @IBOutlet weak var DealerCard2: UIImageView!
     @IBOutlet weak var UserCard1: UIImageView!
     @IBOutlet weak var USerCard2: UIImageView!
     @IBOutlet weak var TextField: UITextField!
-    
-    
-    //var disclaimerHasBeenDisplayed = false
     var randomCardIndex1 : Int = 0
     var randomCardIndex2 : Int = 0
     var randomCardIndex3 : Int = 0
@@ -38,12 +37,12 @@ class ViewController: UIViewController , UITextFieldDelegate {
     
     
     @IBAction func HintButton(_ sender: Any) {
-        
         SVProgressHUD.showInfo(withStatus: "2->6:+1  7->9:0  10->Ace:-1")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NumberOfCardCounted.text = "\(highScore) cards "
         self.view.endEditing(true)
         let highScoreDefault = UserDefaults.standard
         if (highScoreDefault.value(forKey: "highScore") != nil){
@@ -73,7 +72,6 @@ class ViewController: UIViewController , UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
         return true
     }
   
@@ -135,6 +133,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         }
       
         print(score)
+        
     }
     @IBAction func checkAnswer(_ sender: AnyObject) {
         
@@ -154,6 +153,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
                 ViewController.shared.highScore = achievement
                 ViewController.shared.highScoreDefault.setValue(ViewController.shared.highScore, forKey: "highScore")
                 ViewController.shared.highScoreDefault.synchronize()
+                NumberOfCardCounted.text = "\(achievement) cards "
             }
             
             }else {
@@ -178,87 +178,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         }
             TextField.text = ""
             }
-//        getData()
-    
-    
-//    open func saveData(score : Int){
-//
-//
-//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
-//        let newEntity = NSManagedObject(entity: entity!, insertInto: context)
-//
-//        newEntity.setValue(highScore, forKey: "number")
-//
-//        do{
-//            try context.save()
-//            print("saved")
-//
-//        }catch{
-//            print("failed saving")
-//
-//        }
-//
-//    }
-//
-//    func fetchData(){
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//            return
-//        }
-//        let mangedContext = appDelegate.persistentContainer.viewContext
-//
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "number")
-//        do{
-//            Entity = try mangedContext.fetch(fetchRequest)
-//            print("fetched")
-//        }catch let error as NSError {
-//            print("Could not fetch. \(error), \(error.userInfo)")
-//        }
-//    }
-    
-//
-//    func save(score: Int){
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//            return
-//        }
-//        let context = appDelegate.persistentContainer.viewContext
-//
-//        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
-//
-//        let Entity = NSManagedObject(entity: entity!, insertInto: context)
-//
-//
-//        Entity.setValue(highScore, forKey: "number")
-//
-//        do{
-//            try context.save()
-//            print("saved")
-//
-//
-//        }catch let error as NSError{
-//            print("Could not save. \(error), \(error.userInfo)")
-//        }
 
-//}
-//    open func getData(){
-//
-//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
-//
-//        do{
-//            let result = try context.fetch(request)
-//            for data in result as! [NSManagedObject]
-//            {
-//                highScore = data.value(forKey: "number") as! Int
-//            }
-//        }catch{
-//                print("failling")
-//
-//            }
-//
-//        }
-//
-//
     @IBAction func Reset(_ sender: Any) {
         score = 0
         TextField.text = ""
@@ -266,6 +186,6 @@ class ViewController: UIViewController , UITextFieldDelegate {
 
     }
 
-
+    
     
 }

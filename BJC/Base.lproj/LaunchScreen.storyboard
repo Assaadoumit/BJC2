@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AE4-ev-gok">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AE4-ev-gok">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,26 +21,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BKGR2" translatesAutoresizingMaskIntoConstraints="NO" id="do8-gl-8pV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n3" translatesAutoresizingMaskIntoConstraints="NO" id="do8-gl-8pV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlackJack Counter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3S-Yl-Opy">
-                                <rect key="frame" x="50" y="260" width="275" height="167"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="47"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="50" y="250" width="275" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="HDg-AU-yfP"/>
+                                    <constraint firstAttribute="width" constant="275" id="rl5-bU-wNx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="i3S-Yl-Opy" firstAttribute="top" secondItem="nhG-y1-5yE" secondAttribute="bottom" constant="240" id="1q5-Rt-wWv"/>
-                            <constraint firstItem="i3S-Yl-Opy" firstAttribute="leading" secondItem="nYj-qb-Z82" secondAttribute="leading" constant="50" id="FbZ-ac-dFs"/>
+                            <constraint firstItem="i3S-Yl-Opy" firstAttribute="centerX" secondItem="nYj-qb-Z82" secondAttribute="centerX" id="LJY-xU-TKU"/>
                             <constraint firstItem="do8-gl-8pV" firstAttribute="trailing" secondItem="nYj-qb-Z82" secondAttribute="trailing" id="Nj2-UJ-gyV"/>
                             <constraint firstItem="do8-gl-8pV" firstAttribute="top" secondItem="nYj-qb-Z82" secondAttribute="top" id="SMA-GX-GG2"/>
-                            <constraint firstItem="8pw-Ve-BOp" firstAttribute="top" secondItem="i3S-Yl-Opy" secondAttribute="bottom" constant="240" id="YRv-Gj-SFO"/>
-                            <constraint firstAttribute="trailing" secondItem="i3S-Yl-Opy" secondAttribute="trailing" constant="50" id="dvf-mL-v1K"/>
                             <constraint firstAttribute="height" secondItem="do8-gl-8pV" secondAttribute="height" id="frs-Gu-RZe"/>
                             <constraint firstItem="do8-gl-8pV" firstAttribute="bottom" secondItem="8pw-Ve-BOp" secondAttribute="top" id="kxk-ih-6GB"/>
+                            <constraint firstItem="i3S-Yl-Opy" firstAttribute="centerY" secondItem="nYj-qb-Z82" secondAttribute="centerY" id="lhz-vd-Bkh"/>
                             <constraint firstItem="do8-gl-8pV" firstAttribute="leading" secondItem="nYj-qb-Z82" secondAttribute="leading" id="ux8-7E-ood"/>
                         </constraints>
                     </view>
@@ -52,6 +55,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BKGR2" width="168" height="300"/>
+        <image name="n3" width="168" height="300"/>
     </resources>
 </document>

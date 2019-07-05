@@ -7,5 +7,9 @@ target 'BJC' do
 
   # Pods for BJC
 pod 'SVProgressHUD'
+pod 'Firebase/Core'
+pod 'Firebase/AdMob'
+pod 'Google-Mobile-Ads-SDK'
+
 
 end
