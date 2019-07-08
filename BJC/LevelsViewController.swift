@@ -41,11 +41,11 @@ class LevelsViewController: UIViewController {
 
         Level1Pressed.layer.cornerRadius = 30
         Level2Pressed.layer.cornerRadius = 30
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        bannerView.delegate = self
-        
+        bannerView.adUnitID = "ca-app-pub-9955020715877598/8898923532"
+//        bannerView.rootViewController = self
+//        bannerView.load(GADRequest())
+//        bannerView.delegate = self
+//        
    
   }
 }

@@ -16,9 +16,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var GiveATryButton: UIButton!
     @IBOutlet weak var HowToCountButton: UIButton!
     @IBOutlet weak var HighScoreLabel: UILabel!
-    
     @IBOutlet weak var bannerView: GADBannerView!
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         HighScoreLabel.text = "0"
         GiveATryButton.layer.cornerRadius = 20
@@ -27,10 +28,10 @@ class HomeViewController: UIViewController {
             ViewController.shared.highScore = ViewController.shared.highScoreDefault.value(forKey:
                 "highScore") as! Int
             
-            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-            bannerView.rootViewController = self
-            bannerView.load(GADRequest())
-            bannerView.delegate = self
+//            bannerView.adUnitID = "ca-app-pub-9955020715877598/3143199825"
+//            bannerView.rootViewController = self
+//            bannerView.load(GADRequest())
+//            bannerView.delegate = self
         }
         
         HighScoreLabel.text = " HighScore = \(ViewController.shared.highScore) rounds "
