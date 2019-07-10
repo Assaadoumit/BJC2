@@ -183,6 +183,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         score = 0
         TextField.text = ""
         achievement = 0
+        
 
     }
 

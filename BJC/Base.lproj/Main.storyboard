@@ -1160,16 +1160,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-19-MRC">
-                                <rect key="frame" x="20" y="412" width="374" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="7Ro-Yw-oBl"/>
-                                    <constraint firstAttribute="height" id="bH2-8P-6he"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-uX-dX6" customClass="GADBannerView">
                                 <rect key="frame" x="47" y="812" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1178,6 +1168,13 @@
                                     <constraint firstAttribute="width" constant="320" id="cWq-GW-qyV"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-19-MRC">
+                                <rect key="frame" x="20" y="367" width="374" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1185,39 +1182,32 @@
                             <constraint firstItem="6xz-pc-efI" firstAttribute="trailing" secondItem="4Qj-tF-Z79" secondAttribute="trailingMargin" id="BDO-pe-vhT"/>
                             <constraint firstItem="6xz-pc-efI" firstAttribute="leading" secondItem="4Qj-tF-Z79" secondAttribute="leadingMargin" id="EKW-vh-yAC"/>
                             <constraint firstItem="H7V-wl-lpQ" firstAttribute="top" secondItem="4Qj-tF-Z79" secondAttribute="top" id="G6X-GR-lNs"/>
-                            <constraint firstItem="1qE-19-MRC" firstAttribute="top" secondItem="4Lc-pp-MU5" secondAttribute="bottom" constant="53" id="GNR-uv-gWh"/>
                             <constraint firstItem="k9T-I3-iyR" firstAttribute="top" secondItem="cIe-uX-dX6" secondAttribute="bottom" id="ItP-BX-lbF"/>
                             <constraint firstItem="br9-WY-K2J" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="LW3-j5-y0a"/>
                             <constraint firstItem="br9-WY-K2J" firstAttribute="trailing" secondItem="4Qj-tF-Z79" secondAttribute="trailingMargin" id="NSP-Xy-XKj"/>
-                            <constraint firstItem="1qE-19-MRC" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="ORo-Cr-qTj"/>
                             <constraint firstItem="4ra-5u-lz6" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="OhV-7K-rcw"/>
                             <constraint firstItem="4ra-5u-lz6" firstAttribute="leading" secondItem="4Qj-tF-Z79" secondAttribute="leadingMargin" id="Pqm-zh-moV"/>
                             <constraint firstItem="6xz-pc-efI" firstAttribute="top" secondItem="br9-WY-K2J" secondAttribute="bottom" constant="48" id="QXb-uv-TkG"/>
                             <constraint firstItem="6xz-pc-efI" firstAttribute="top" secondItem="br9-WY-K2J" secondAttribute="bottom" constant="48" id="Uiu-ef-h76"/>
                             <constraint firstItem="4ra-5u-lz6" firstAttribute="top" secondItem="nLV-MJ-VwC" secondAttribute="bottom" constant="28" id="a0I-2o-Ohl"/>
-                            <constraint firstItem="1qE-19-MRC" firstAttribute="top" secondItem="4Lc-pp-MU5" secondAttribute="bottom" constant="53" id="aIr-ab-HNU"/>
                             <constraint firstItem="4Lc-pp-MU5" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="ajU-vx-36J"/>
                             <constraint firstItem="4ra-5u-lz6" firstAttribute="trailing" secondItem="4Qj-tF-Z79" secondAttribute="trailingMargin" id="aum-sA-jkC"/>
                             <constraint firstItem="4Lc-pp-MU5" firstAttribute="top" secondItem="4ra-5u-lz6" secondAttribute="bottom" constant="8" id="bST-xG-VGw"/>
-                            <constraint firstItem="1qE-19-MRC" firstAttribute="leading" secondItem="4Qj-tF-Z79" secondAttribute="leading" constant="20" id="bUr-3Z-VTW"/>
                             <constraint firstItem="cIe-uX-dX6" firstAttribute="top" secondItem="6xz-pc-efI" secondAttribute="bottom" constant="180" id="cNU-DO-Cn5"/>
                             <constraint firstItem="6xz-pc-efI" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="cU5-XO-Of9"/>
                             <constraint firstAttribute="trailing" secondItem="H7V-wl-lpQ" secondAttribute="trailing" id="ceD-MK-Ccd"/>
-                            <constraint firstAttribute="trailing" secondItem="1qE-19-MRC" secondAttribute="trailing" constant="20" id="dex-4H-ExU"/>
                             <constraint firstItem="br9-WY-K2J" firstAttribute="leading" secondItem="4Qj-tF-Z79" secondAttribute="leadingMargin" id="fMb-i3-umN"/>
-                            <constraint firstItem="br9-WY-K2J" firstAttribute="top" secondItem="1qE-19-MRC" secondAttribute="bottom" constant="70" id="fhL-Oc-M2w"/>
                             <constraint firstAttribute="bottom" secondItem="H7V-wl-lpQ" secondAttribute="bottom" id="gxB-VE-uSo"/>
                             <constraint firstItem="4Lc-pp-MU5" firstAttribute="leading" secondItem="4Qj-tF-Z79" secondAttribute="leadingMargin" id="q2U-PK-l46"/>
                             <constraint firstItem="4Lc-pp-MU5" firstAttribute="top" secondItem="4ra-5u-lz6" secondAttribute="bottom" constant="8" id="sp1-VB-doL"/>
                             <constraint firstItem="cIe-uX-dX6" firstAttribute="centerX" secondItem="4Qj-tF-Z79" secondAttribute="centerX" id="wQl-s6-hUv"/>
-                            <constraint firstItem="br9-WY-K2J" firstAttribute="top" secondItem="1qE-19-MRC" secondAttribute="bottom" constant="70" id="woM-DV-TkD"/>
                             <constraint firstItem="H7V-wl-lpQ" firstAttribute="leading" secondItem="4Qj-tF-Z79" secondAttribute="leading" id="yzG-L4-XDr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J1Y-g7-qSd"/>
                     <connections>
                         <outlet property="GiveATryButton" destination="6xz-pc-efI" id="u9m-cq-IqU"/>
-                        <outlet property="HighScoreLabel" destination="1qE-19-MRC" id="npT-gy-csa"/>
+                        <outlet property="HighScoreLabel" destination="1qE-19-MRC" id="q5f-Gf-XsP"/>
                         <outlet property="HowToCountButton" destination="br9-WY-K2J" id="OAy-m7-qXl"/>
                         <outlet property="bannerView" destination="cIe-uX-dX6" id="Nxl-Tb-TvJ"/>
                     </connections>
