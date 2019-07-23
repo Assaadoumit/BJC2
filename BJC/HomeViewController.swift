@@ -5,6 +5,7 @@
 //  Created by MacBookPro on 12/18/18.
 //  Copyright © 2018 MacBookPro. All rights reserved.
 //// ad unit id : ca-app-pub-9955020715877598/3143199825
+// testing ad unit id ca-app-pub-3940256099942544/6300978111
 
 import UIKit
 import CoreData
@@ -27,15 +28,13 @@ class HomeViewController: UIViewController {
         if (ViewController.shared.highScoreDefault.value(forKey: "highScore") != nil){
             ViewController.shared.highScore = ViewController.shared.highScoreDefault.value(forKey:
                 "highScore") as! Int
-            
-//            bannerView.adUnitID = "ca-app-pub-9955020715877598/3143199825"
-//            bannerView.rootViewController = self
-//            bannerView.load(GADRequest())
-//            bannerView.delegate = self
         }
         
+        bannerView.adUnitID = "ca-app-pub-9955020715877598/3143199825"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
         HighScoreLabel.text = " HighScore = \(ViewController.shared.highScore) rounds "
-        
         
         func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
@@ -52,6 +51,6 @@ extension HomeViewController: GADBannerViewDelegate{
     }
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print(error)
-        
+        print("error in receiving ad")
     }
 }
