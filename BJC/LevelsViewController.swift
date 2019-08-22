@@ -11,21 +11,22 @@ import UIKit
 import SVProgressHUD
 import GoogleMobileAds
 
-class LevelsViewController: UIViewController {
+class LevelsViewController: UIViewController , GADInterstitialDelegate {
     @IBOutlet weak var liveCounting: UIButton!
-    
     @IBOutlet weak var HowLevel2: UIButton!
     @IBOutlet weak var HowLevel1: UIButton!
     @IBOutlet weak var Level2Pressed: UIButton!
     @IBOutlet weak var Level1Pressed: UIButton!
 
     @IBOutlet weak var bannerView: GADBannerView!
+//    var interstitial = GADInterstitial?
     
     @IBAction func Back(_ sender: Any) {
         
     }
     
     @IBAction func liveCounting(_ sender: Any) {
+        
         self.performSegue(withIdentifier: "toLiveCounting", sender: self)
     }
     
@@ -53,8 +54,11 @@ class LevelsViewController: UIViewController {
         bannerView.load(GADRequest())
         bannerView.delegate = self
         
-   
-  }
+//        interstitial = GADInterstitial(adUnitID: "jjj")
+//        let request = GADRequest.self
+//        interstitial.load(request)
+//
+    }
 }
 extension LevelsViewController: GADBannerViewDelegate{
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
