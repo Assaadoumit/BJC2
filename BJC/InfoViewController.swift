@@ -13,8 +13,8 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var StartButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        StartButton.layer.cornerRadius = 20
+//
+//        StartButton.layer.cornerRadius = 20
         
         
         

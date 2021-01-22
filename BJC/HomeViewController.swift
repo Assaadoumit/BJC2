@@ -18,16 +18,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var HowToCountButton: UIButton!
     @IBOutlet weak var HighScoreLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
+    
+    
     override func viewDidLoad() {
         
         
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         HighScoreLabel.text = "0"
         GiveATryButton.layer.cornerRadius = 20
         HowToCountButton.layer.cornerRadius = 20
         if (ViewController.shared.highScoreDefault.value(forKey: "highScore") != nil){
             ViewController.shared.highScore = ViewController.shared.highScoreDefault.value(forKey:
-                "highScore") as! Int
+                                                                                            "highScore") as! Int
         }
         
         bannerView.adUnitID = "ca-app-pub-9955020715877598/3143199825"
@@ -41,8 +44,27 @@ class HomeViewController: UIViewController {
             
         }
         
+    }
+//    @IBAction func startButtonPressed(_ sender: Any){
+//        let vc = LevelsViewController()
+//        self.present(vc, animated: true, completion: nil)
+//
+//    }
+//    @IBAction func howToCountButtonPressed(_ sender: Any){
+//        let vc = InfoViewController()
+//        self.present(vc, animated: true, completion: nil)
+//    }
+    @IBAction func startButtonPressed(_ sender: Any) {
+        let secondViewController = (self.storyboard?.instantiateViewController(withIdentifier: "LevelsViewController")) as! LevelsViewController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
+    @IBAction func howToCountButtonPressed(_ sender: Any) {
+        let secondViewController = (self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController")) as! InfoViewController
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+
         
     }
+    //
 }
 
 extension HomeViewController: GADBannerViewDelegate{
