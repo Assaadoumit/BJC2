@@ -45,6 +45,9 @@ class HomeViewController: UIViewController {
         }
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 //    @IBAction func startButtonPressed(_ sender: Any){
 //        let vc = LevelsViewController()
 //        self.present(vc, animated: true, completion: nil)

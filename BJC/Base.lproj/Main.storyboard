@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BJC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="BJC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lg1-La-iQa"/>
                         <viewControllerLayoutGuide type="bottom" id="jgH-Ut-pnN"/>
@@ -221,7 +221,7 @@
         <!--Level2 View Controller-->
         <scene sceneID="y2P-oG-WN3">
             <objects>
-                <viewController id="6V4-XZ-kuL" customClass="Level2ViewController" customModule="BJC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Level2ViewController" id="6V4-XZ-kuL" customClass="Level2ViewController" customModule="BJC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T8E-Ca-Wt1"/>
                         <viewControllerLayoutGuide type="bottom" id="0Cz-U3-TTL"/>
@@ -519,7 +519,7 @@
         <!--Live Counting View Controller-->
         <scene sceneID="KZC-cs-0n3">
             <objects>
-                <viewController id="HKY-S7-bYr" customClass="LiveCountingViewController" customModule="BJC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LiveCountingViewController" id="HKY-S7-bYr" customClass="LiveCountingViewController" customModule="BJC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hdq-ba-3PR"/>
                         <viewControllerLayoutGuide type="bottom" id="Sfa-1a-1dW"/>
@@ -868,6 +868,9 @@
                                                 <state key="normal" title="Back">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="backButton:" destination="nhK-1O-KRF" eventType="touchUpInside" id="DV2-sG-TMF"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First You Should know the value of each card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssv-LA-QqA">
                                                 <rect key="frame" x="0.0" y="70" width="375" height="22"/>
@@ -1004,6 +1007,9 @@
                                                 <state key="normal" title="Lets Start Counting">
                                                     <color key="titleColor" red="0.10106678299999999" green="0.0028912977269999998" blue="0.0061149022360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="startButtonPressed:" destination="nhK-1O-KRF" eventType="touchUpInside" id="7p1-u9-HIr"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended to start with level1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16C-Gm-lZh">
                                                 <rect key="frame" x="19" y="1900" width="337" height="16"/>
@@ -1501,6 +1507,9 @@
                                 <state key="normal" title="Level 2">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="level2ButtonPressed" destination="eZ9-a8-OMe" eventType="touchUpInside" id="N3v-F9-hjd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMV-Ig-VQF">
                                 <rect key="frame" x="20" y="324" width="374" height="60"/>
@@ -1513,6 +1522,9 @@
                                 <state key="normal" title="Level 1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="level1ButtonPressed" destination="eZ9-a8-OMe" eventType="touchUpInside" id="9PK-n8-aDC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Keep the count running " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IvS-Mf-RjX">
                                 <rect key="frame" x="20" y="549" width="374" height="22"/>
@@ -1554,6 +1566,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2f-S9-5cO">
+                                <rect key="frame" x="20" y="47" width="35" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backAction:" destination="eZ9-a8-OMe" eventType="touchUpInside" id="NKc-eK-BoO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1596,6 +1616,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ayv-Ci-EJe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1608,7 +1629,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="viJ-Mf-bBt"/>
+        <segue reference="XjQ-OX-Sfy"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0071383341859999998" green="0.023576300759999998" blue="0.003545719907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
@@ -1618,6 +1639,7 @@
         <image name="Jack" width="120" height="170"/>
         <image name="King" width="120" height="170"/>
         <image name="Queen" width="120" height="170"/>
+        <image name="backButton" width="24" height="40"/>
         <image name="blackjack-card-values" width="450" height="410"/>
         <image name="card10" width="120" height="170"/>
         <image name="card2" width="120" height="170"/>
