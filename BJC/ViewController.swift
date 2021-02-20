@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  BJC
 //
-//  Created by MacBookPro on 12/10/18.
+//  Created by Assaad Doumit on 12/10/18.
 //  Copyright © 2018 MacBookPro. All rights reserved.
 // APP Id in ADMob :ca-app-pub-9955020715877598~9830323953
 // ad unit id : ca-app-pub-9955020715877598/3143199825

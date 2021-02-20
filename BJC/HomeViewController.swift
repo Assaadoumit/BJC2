@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  BJC
 //
-//  Created by MacBookPro on 12/18/18.
+//  Created by Assaad Doumit on 12/18/18.
 //  Copyright © 2018 MacBookPro. All rights reserved.
 //// ad unit id : ca-app-pub-9955020715877598/3143199825
 // testing ad unit id ca-app-pub-3940256099942544/6300978111

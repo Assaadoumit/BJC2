@@ -2,7 +2,7 @@
 //  LiveCountingViewController.swift
 //  BJC
 //
-//  Created by MacBookPro on 7/19/19.
+//  Created by Assaad Doumit on 7/19/19.
 //  Copyright © 2019 MacBookPro. All rights reserved.
 //
 
@@ -91,7 +91,7 @@ class LiveCountingViewController: UIViewController {
     
     @IBAction func backButtonPressed(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
 
     }
     

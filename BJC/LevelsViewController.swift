@@ -19,10 +19,6 @@ class LevelsViewController: UIViewController , GADInterstitialDelegate, UIGestur
     
     @IBOutlet weak var bannerView: GADBannerView!
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
